@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dream Destination Travel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      main {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+      }
+      .image-container {
+        background-image: url(./img.jpg);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 45vw;
+      }
+      .title {
+        display: flex;
+        text-align: center;
+        color: white;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: relative;
+        top: 10vh;
+        padding: 10px 0;
+        align-items: center;
+        justify-content: center;
+        font-style: italic;
+      }
+      .form-container {
+        background-color: #8080804d;
+        flex: 1;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        padding-left: 30px;
+        text-transform: uppercase;
+      }
+      img {
+        width: 5vw;
+      }
+
+      .logo-container {
+        padding: 10px;
+        background-color: #ffffffc4;
+      }
+
+      .input-container {
+        display: flex;
+        flex-flow: column;
+        width: 38%;
+      }
+      .form-input-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 12px 75px;
+      }
+      .input-container input {
+        border: gray 2px solid;
+        border-radius: 3px;
+        padding: 5px;
+      }
+      .submit {
+        padding: 7px 30px;
+        color: #f5efef;
+        background: black;
+        opacity: 0.89;
+        border: 2px solid #f5efef;
+        border-radius: 4px;
+        font-size: 20px;
+        font-weight: initial;
+        text-transform: uppercase;
+      }
+      .submit-button {
+        margin-top: 8vh;
+        margin-left: 40px;
+      }
+      
+      .form-title {
+        margin-bottom: 8vh;
+        margin-left: 40px;
+      }
+      .form-title p {
+        font-size: large;
+        text-transform: none;
+        margin-bottom: 10px;
+      }
+
+      .image-container-2 {
+        background-image: url(./travel.jpeg);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .display-image-container-2  {
+        display: none;
+      }
+
+      .image-2 {
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="image-container">
+        <div class="title">
+          <div class="logo-container">
+            <img src="./logo_png.png" alt="Logo" />
+          </div>
+          &nbsp;&nbsp;&nbsp;<span>Live your dream and Travel with us !!!</span>
+        </div>
+      </div>
+      <form class="form-container">
+        <div class="form-title">
+            <p>Traveling is not a luxury; it's an investment in yourself and your understanding of the world.</p>
+            <h3>Get started With your journey today !</h3>
+        </div>
+        
+        <div class="form-input-container">
+          <div class="input-container">
+            <label for="f-name">First Name</label>
+            <input
+              type="text"
+              name="f-name"
+              placeholder="First Name"
+              required="required"
+            />
+          </div>
+          <div class="input-container">
+            <label for="l-name">Last Name</label>
+            <input
+              type="text"
+              name="l-name"
+              placeholder="Last Name"
+              required="required"
+            />
+          </div>
+          <div class="input-container">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required="required"
+            />
+          </div>
+          <div class="input-container">
+            <label for="p-number">Phone Number</label>
+            <input
+              type="text"
+              name="p-number"
+              placeholder="Phone Number"
+              maxlength="10"
+              required="required"
+              minlength="9"
+              maxlength="9"
+              pattern="{0,9}"
+            />
+          </div>
+          <div class="input-container">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required="required"
+            />
+          </div>
+          <div class="input-container">
+            <label for="c-password">Confirm Password</label>
+            <input
+              type="password"
+              name="c-password"
+              placeholder="Confirm Password"
+              required="required"
+            />
+          </div>
+        </div>
+        <div class="submit-button"><button class="submit"  type="button">Submit</button></div>
+      </form>
+
+    
+      
+    </main>
+    <div class="image-2 display-image-container-2">
+        <div class="image-container-2">
+            <div class="title">
+                <div class="logo-container">
+                    <img src="./logo_png.png" alt="Logo" />
+                  </div>
+                &nbsp;&nbsp;&nbsp;<span>Congrats your one step closer to your Dream destination !!!</span>
+            </div>
+            
+        </div>
+    <script>
+        const submitButton = document.getElementsByClassName('submit')[0];
+        function submit() {
+            console.log("hello")
+            var mainContainer = document.getElementsByTagName('main')[0]
+            mainContainer.style.display = 'none'
+            
+            var image2Container = document.getElementsByClassName('display-image-container-2')[0]
+            image2Container.classList.remove('display-image-container-2')
+        }
+
+        submitButton.addEventListener('click', submit);
+    </script>
+  </body>
+</html>
