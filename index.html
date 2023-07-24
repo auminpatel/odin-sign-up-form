@@ -179,7 +179,7 @@
               required="required"
               minlength="9"
               maxlength="9"
-              pattern="{0,9}"
+              pattern="{0-9}"
             />
           </div>
           <div class="input-container">
@@ -189,6 +189,7 @@
               name="password"
               placeholder="Password"
               required="required"
+              minlength="8"
             />
           </div>
           <div class="input-container">
@@ -198,10 +199,11 @@
               name="c-password"
               placeholder="Confirm Password"
               required="required"
+              minlength="8"
             />
           </div>
         </div>
-        <div class="submit-button"><button class="submit"  type="button">Submit</button></div>
+        <div class="submit-button"><button class="submit"  type="submit">Submit</button></div>
       </form>
 
     
@@ -218,9 +220,9 @@
             
         </div>
     <script>
-        const submitButton = document.getElementsByClassName('submit')[0];
-        function submit() {
-            console.log("hello")
+        const submitButton = document.getElementsByClassName('form-container')[0];
+        function submit(e) {
+          e.preventDefault()
             var mainContainer = document.getElementsByTagName('main')[0]
             mainContainer.style.display = 'none'
             
@@ -228,7 +230,7 @@
             image2Container.classList.remove('display-image-container-2')
         }
 
-        submitButton.addEventListener('click', submit);
+        submitButton.addEventListener('submit', submit);
     </script>
   </body>
 </html>
